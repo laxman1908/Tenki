@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  @apply text-white bg-black bg-repeat bg-cover font-mono;
+}
+@layer components {
+  .App {
+    @apply flex flex-col flex-nowrap mt-0 items-center justify-around lg:flex-row;
+  }
+  .lefttooo {
+    @apply flex flex-col lg:justify-evenly lg:h-screen;
+  }
+  .rightoooo {
+    @apply flex;
+  }
+  .searchBar {
+    @apply w-96 m-4 lg:mt-0;
+  }
+  .cntWeather {
+    @apply flex flex-col m-4 h-64 w-96 p-6 text-white backdrop-blur-md items-start rounded-2xl bg-black/30 shadow-lg ring-1 ring-white/30;
+  }
+  .row1 {
+    @apply flex flex-row items-center ml-0 m-4;
+  }
+  .row3 {
+    @apply flex flex-row items-center m-1 text-xl grow;
+  }
+  .cards-div {
+    @apply relative rounded-2xl bg-local bg-cover bg-black/40 backdrop-blur-md shadow-lg ring-1 ring-white/30 m-4 h-14 w-96 p-2 overflow-clip hover:h-64 transition-all duration-500;
+  }
+  .txt-head {
+    @apply absolute text-2xl inset-0 rounded-bl-2xl rounded-br-2xl flex align-baseline justify-center;
+  }
+  .txt-desc {
+    @apply invisible border-t-2 border-gray-500 text-lg flex transition-all delay-200 items-center;
+  }
+  .cards-div:hover .txt-desc {
+    @apply visible mt-14;
+  }
+  .txt-desc-details {
+    @apply flex flex-col basis-1/2 p-2 justify-evenly;
+  }
+  .dayName {
+    @apply basis-1/2 p-2;
+  }
+  .forecast-temp {
+    @apply basis-1/4 p-2;
+  }
+  .forecast-icon {
+    @apply ml-auto p-1 basis-1/4;
+  }
 }
