@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Tenki - React based website to show current and forecasted weather information
+
+## Live link - [https://tenkii.vercel.app/](https://tenkii.vercel.app/)
+
+
+___________________________________________________________________________________________________________
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
